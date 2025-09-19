@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+main {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    width: 100vw;
+    height: 100vh;            
+}
+
+.espaço {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    gap: 15px;                 
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.botao {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #ddd;
+}
+
+.sol {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: none;
+    transition: 0.9s;
+}
+
+/* Quando "ligar" estiver selecionado */
+#ligar:checked ~ .sol {
+    background-color: greenyellow;
+    box-shadow: 0 0 40px 15px greenyellow;
+}
+
+/* Quando "desligar" estiver selecionado */
+#desligar:checked ~ .sol {
+    background-color: black;
+    box-shadow: none;
+}
